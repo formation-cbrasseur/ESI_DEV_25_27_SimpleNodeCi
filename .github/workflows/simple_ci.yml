@@ -31,7 +31,7 @@ jobs:
     # Je lance mon linter
     - run: npm run lint
     # Lance mes tests
-    - run: npx jest --coverage --ignore-scripts
+    - run: npx jest@29.7.0 --coverage --ignore-scripts
 
   # post-build:
   #   runs-on: ubuntu-latest
