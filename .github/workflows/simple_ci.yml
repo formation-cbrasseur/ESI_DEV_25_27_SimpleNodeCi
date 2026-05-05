@@ -25,13 +25,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     # Gérer les dépendances (Clean et install)
-    - run: npm ci --ignore-scripts
+    - run: npm ci
     # Run et build
     - run: npm run build --if-present
     # Je lance mon linter
     - run: npm run lint
     # Lance mes tests
-    - run: npx jest@29.7.0 --coverage --ignore-scripts
+    - run: npx jest@29.7.0 --coverage
 
   # post-build:
   #   runs-on: ubuntu-latest
