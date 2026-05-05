@@ -1,0 +1,26 @@
+{
+  "name": "simplecinode",
+  "version": "1.0.0",
+  "description": "Une CI simple en node pour une demo",
+  "homepage": "https://github.com/formation-cbrasseur/ESI_DEV_25_27_SimpleNodeCi#readme",
+  "bugs": {
+    "url": "https://github.com/formation-cbrasseur/ESI_DEV_25_27_SimpleNodeCi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formation-cbrasseur/ESI_DEV_25_27_SimpleNodeCi.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest .",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint": "^10.3.0",
+    "eslint-plugin-jsdoc": "^62.9.0",
+    "jest": "^30.3.0"
+  }
+}
