@@ -1,4 +1,4 @@
-import { GameBoard, Player } from './game.js'
+const { GameBoard, Player } = require('./game')
 
 console.log('hello world')
 
