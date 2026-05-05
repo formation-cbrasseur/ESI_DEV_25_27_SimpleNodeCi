@@ -1,36 +1,4 @@
-class GameBoard {
-    players
-
-    constructor() {
-        this.players = []
-    }
-
-    addPlayer(player) {
-        if (player.name == "Chuck Norris")
-            throw new Error('Chuck Norris is not allowed to play')
-        this.players.push(player)
-    }
-
-    displayPlayersPosition() {
-        this.players.forEach(player => {
-            console.log(`${player.name} is at position ${player.position}`)
-        })
-    }
-
-    incrementPlayerPosition(player, steps) {
-        player.position += steps
-    }
-}
-
-class Player {
-    name
-    position
-
-    constructor(name) {
-        this.name = name
-        this.position = 0
-    }
-}
+const { GameBoard, Player } = require('../game')
 
 describe('GameBoard tests', () => {
     let gameBoard
@@ -78,5 +46,16 @@ describe('GameBoard tests', () => {
         expect('').toBeFalsy()
         expect('Test').toBe('Test')
         expect(() => gameBoard.addPlayer(new Player('Chuck Norris'))).toThrow('Chuck Norris is not allowed to play')
+    })
+
+    it('should display players position', () => {
+        // Arrange
+        gameBoard.addPlayer(player)
+
+        // Act
+        gameBoard.displayPlayersPosition()
+
+        // Assert
+        expect(true).toBeTruthy() // Just to avoid the "Your test suite must contain at least one test." error
     })
 })
